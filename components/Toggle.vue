@@ -1,7 +1,7 @@
 <template>
   <div class="mb-5">
-    <div class="mb-2 underline">Hi I'm Toggle</div>
-    <button id="toggle" v-on:click="send('TOGGLE');">
+    <div class="mb-2 underline">Hi I'm Toggle.</div>
+    <button id="toggle" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" v-on:click="send('TOGGLE');">
       {{ current.matches("inactive") ? "Off" : "On" }}
     </button>
   </div>

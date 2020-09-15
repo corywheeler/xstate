@@ -1,13 +1,25 @@
 <template>
   <div class="mt-5">
     <div class="mb-2 underline">Hi, I'm the Promise Machine.</div>
-    <button id="send-pending" v-on:click="send('PENDING')">Send Pending</button>
-    <button id="send-resolved" v-on:click="send('RESOLVE')">Send Resolved</button>
-    <button id="send-rejected" v-on:click="send('REJECT')">Send Rejected</button>
+    <button id="send-pending"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+            v-on:click="send('PENDING')">Send Pending
+    </button>
+    <button id="send-resolved"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+            v-on:click="send('RESOLVE')">Send Resolved
+    </button>
+    <button id="send-rejected"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+            v-on:click="send('REJECT')">Send Rejected
+    </button>
     <div id="pending">{{ current.matches("pending") ? "Pending" : "Empty" }}</div>
     <div id="resolved">{{ current.matches("resolved") ? "Resolved" : "Empty" }}</div>
     <div id="rejected">{{ current.matches("rejected") ? "Rejected" : "Empty" }}</div>
-    <button id="reset" v-on:click="reset()">Reset</button>
+    <button id="reset"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+            v-on:click="reset()">Reset
+    </button>
   </div>
 </template>
 
