@@ -40,7 +40,7 @@ export default {
         this.current = state;
         this.context = state.context;
       })
-        .start()
+      .start()
     }
   }
 }
