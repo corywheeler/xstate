@@ -18,12 +18,7 @@ import { promiseMachine } from '~/components/promiseMachine'
 export default {
   name: 'promise-machine',
   created() {
-    this.promiseservice.onTransition(state => {
-      debugger;
-      this.current = state;
-      this.context = state.context;
-    })
-    .start()
+    this.reset();
   },
   data() {
     return {
@@ -39,13 +34,13 @@ export default {
     reset() {
       console.log('Look to services and Actors to handle this instead.');
 
-      // this.promiseservice = interpret(promiseMachine);
-      // this.promiseservice.onTransition(state => {
-      //   debugger;
-      //   this.current = state;
-      //   this.context = state.context;
-      // })
-      //   .start()
+      this.promiseservice = interpret(promiseMachine);
+      this.promiseservice.onTransition(state => {
+        debugger;
+        this.current = state;
+        this.context = state.context;
+      })
+        .start()
     }
   }
 }
