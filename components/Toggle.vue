@@ -1,7 +1,10 @@
 <template>
-  <button id="toggle" v-on:click="send('TOGGLE');">
-    {{ current.matches("inactive") ? "Off" : "On" }}
-  </button>
+  <div class="mb-5">
+    <div>Hi I'm Toggle</div>
+    <button id="toggle" v-on:click="send('TOGGLE');">
+      {{ current.matches("inactive") ? "Off" : "On" }}
+    </button>
+  </div>
 </template>
 
 <script>
