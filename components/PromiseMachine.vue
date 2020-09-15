@@ -36,7 +36,6 @@ export default {
 
       this.promiseservice = interpret(promiseMachine);
       this.promiseservice.onTransition(state => {
-        debugger;
         this.current = state;
         this.context = state.context;
       })
