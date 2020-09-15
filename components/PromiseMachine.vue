@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div>Hi, I'm the Promise Machine.</div>
+  <div class="mt-5">
+    <div class="mb-2 underline">Hi, I'm the Promise Machine.</div>
     <button id="send-pending" v-on:click="send('PENDING')">Send Pending</button>
     <button id="send-resolved" v-on:click="send('RESOLVE')">Send Resolved</button>
     <button id="send-rejected" v-on:click="send('REJECT')">Send Rejected</button>

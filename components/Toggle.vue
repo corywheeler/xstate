@@ -1,6 +1,6 @@
 <template>
   <div class="mb-5">
-    <div>Hi I'm Toggle</div>
+    <div class="mb-2 underline">Hi I'm Toggle</div>
     <button id="toggle" v-on:click="send('TOGGLE');">
       {{ current.matches("inactive") ? "Off" : "On" }}
     </button>
