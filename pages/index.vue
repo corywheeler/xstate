@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <div>
-      <House></House>
       <toggle></toggle>
       <PromiseMachine></PromiseMachine>
     </div>
