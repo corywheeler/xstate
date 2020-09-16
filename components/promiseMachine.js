@@ -5,8 +5,13 @@ export const promiseMachine = Machine({
   context: {
     // some data
   },
-  initial: 'pending',
+  initial: 'idle',
   states: {
+    idle: {
+      on: {
+        PENDING: 'pending'
+      }
+    },
     pending: {
       on: {
         RESOLVE: 'resolved',
