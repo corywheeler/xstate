@@ -13,9 +13,9 @@
             class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
             v-on:click="send('REJECT')">Send Rejected
     </button>
-    <div id="pending">{{ current.matches("pending") ? "Pending" : "Empty" }}</div>
-    <div id="resolved">{{ current.matches("resolved") ? "Resolved" : "Empty" }}</div>
-    <div id="rejected">{{ current.matches("rejected") ? "Rejected" : "Empty" }}</div>
+    <div id="pending" v-if="current.matches('pending')">Pending</div>
+    <div id="resolved" v-if="current.matches('resolved')">Resolved</div>
+    <div id="rejected" v-if="current.matches('rejected')">Rejected</div>
     <button id="reset"
             class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
             v-on:click="reset()">Reset
