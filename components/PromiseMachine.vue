@@ -16,9 +16,10 @@
               v-on:click="send('REJECT')">Reject it
       </button>
     </div>
-    <div id="pending" v-if="current.matches('pending')">Pending</div>
-    <div id="resolved" v-if="current.matches('resolved')">Resolved</div>
-    <div id="rejected" v-if="current.matches('rejected')">Rejected</div>
+    <div v-if="current.matches('idle')">Idle Promise</div>
+    <div v-if="current.matches('pending')">Pending</div>
+    <div v-if="current.matches('resolved')">Resolved</div>
+    <div v-if="current.matches('rejected')">Rejected</div>
     <button id="reset"
             class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
             v-on:click="reset()">Reset
