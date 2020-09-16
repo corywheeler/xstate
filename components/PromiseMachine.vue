@@ -9,11 +9,11 @@
     <div>
       <button id="send-resolved"
               class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-              v-on:click="send('RESOLVE')">Resolve
+              v-on:click="send('RESOLVE')">Resolve it
       </button>
       <button id="send-rejected"
               class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-              v-on:click="send('REJECT')">Reject
+              v-on:click="send('REJECT')">Reject it
       </button>
     </div>
     <div id="pending" v-if="current.matches('pending')">Pending</div>
