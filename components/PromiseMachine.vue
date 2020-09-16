@@ -1,6 +1,11 @@
 <template>
   <div class="mt-5">
     <div class="mb-2 underline">Hi, I'm the Promise Machine.</div>
+    <div class="mb-2">
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+              v-on:click="send('EXECUTE')">Execute Promise
+      </button>
+    </div>
     <div>
       <button id="send-resolved"
               class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
