@@ -1,18 +1,16 @@
 <template>
   <div class="mt-5">
     <div class="mb-2 underline">Hi, I'm the Promise Machine.</div>
-    <button id="send-pending"
-            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-            v-on:click="send('PENDING')">Send Pending
-    </button>
-    <button id="send-resolved"
-            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-            v-on:click="send('RESOLVE')">Send Resolved
-    </button>
-    <button id="send-rejected"
-            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-            v-on:click="send('REJECT')">Send Rejected
-    </button>
+    <div>
+      <button id="send-resolved"
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+              v-on:click="send('RESOLVE')">Resolve
+      </button>
+      <button id="send-rejected"
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+              v-on:click="send('REJECT')">Reject
+      </button>
+    </div>
     <div id="pending" v-if="current.matches('pending')">Pending</div>
     <div id="resolved" v-if="current.matches('resolved')">Resolved</div>
     <div id="rejected" v-if="current.matches('rejected')">Rejected</div>
